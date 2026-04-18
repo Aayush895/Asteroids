@@ -47,7 +47,7 @@ def main():
                 if (shot.collides_with(asteroid) == True):
                     log_event("asteroid_shot")
                     shot.kill()
-                    asteroid.kill()
+                    asteroid.split()
 
         pygame.display.flip() # Update the full display surface to reflect all drawing operations
         dt = clock.tick(60) / 1000 # Limit the game loop to 60 FPS and compute delta time (seconds since last frame)
